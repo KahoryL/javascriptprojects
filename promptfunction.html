@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="promptFunction()">
+    <h1>Javascript Lesson</h1>
+    <p>x, y and z are variables</p>
+    <p id="demo"></p>
+    <button onclick="confirmFunction()"> Confirm function example</button>
+
+    <button onclick="alertFunction()"> Alert function example</button>
+
+    <button onclick="promptFunction()"> Prompt function example</button>
+
+    <script> 
+
+        let x = 5;
+        let y = 6;
+        let z = x + y;
+        document.getElementById("demo").innerHTML = "The value of z is:" + z;
+        
+        function confirmFunction(){
+            confirm("press a button!");
+        }
+        function alertFunction(){
+            alert("Hello World");
+        }
+        function promptFunction(){
+            
+            let person = prompt("Please enter your name");
+            alert("Hi "+ person +" thank you for reviewing my resume site!");
+
+        }
+        
+    </script>
+</body>
+</html>
