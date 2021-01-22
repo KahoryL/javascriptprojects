@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Slider - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  function hideDiv(){
+      $("#size10x10").hide();
+      $("#size10x15").hide();
+      $("#size10x20").hide();
+      $("#size10x25").hide();
+      $("#size10x30").hide();
+      $("#size10x30d").hide();
+      $("#size14x45").hide();
+    };
+    
+
+    $( function() {
+      hideDiv();
+
+      $("#size10x10").show();
+
+      $( "#slider" ).slider();
+
+      $( "#slider" ).slider({
+        value:1,
+        min: 1,
+        max: 7,
+        step: 1,
+        change: function (event, ui){
+          switch (ui.value){
+            case 1:
+              hideDiv();
+              $("#size10x10").show();
+              break;
+            case 2:
+            hideDiv();
+              $("#size10x15").show();
+              break;
+            case 3:
+              hideDiv();
+              $("#size10x20").show();
+              break;
+            case 4:
+              hideDiv();
+              $("#size10x25").show();
+              break;
+            case 5:
+              hideDiv();
+              $("#size10x30").show();
+              break;
+            case 6:
+              hideDiv();
+              $("#size10x30d").show();
+              break;
+            case 7:
+              hideDiv();
+              $("#size14x45").show();
+          }
+       }
+      });
+    });
+    </script>
+</head>
+<body>
+<h1>Js Slider</h1>
+<div id="slider"></div>
+  <div id= "size10x10">10x10
+    <img src="https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+    width="500" height="300">
+  </div>
+  <div id= "size10x15">10x15
+    <img src="https://images.unsplash.com/photo-1592283338081-beb63fa6a156?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1525&q=80"
+    width="500" height="300">
+  </div>
+  <div id= "size10x20">10x20
+    <img src="https://images.unsplash.com/photo-1518378188025-22bd89516ee2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8ZG9nc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=60"
+    width="350" height="300">
+  </div>
+  <div id= "size10x25">10x25
+    <img src="https://images.unsplash.com/photo-1609791636587-50feca5caee7?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8Z29sZGVuJTIwcmV0cmlldmVyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=60"
+    width="500" height="300">
+  </div>
+  <div id= "size10x30">10x30
+    <img src="https://images.unsplash.com/photo-1587402092301-725e37c70fd8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjB8fGN1dGUlMjBkb2dzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=60"
+    width="350" height="300">
+  </div>
+  <div id= "size10x30d">10x30d
+    <img src="https://images.unsplash.com/flagged/photo-1573977187225-360187080bab?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjR8fGN1dGUlMjBkb2dzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=60"
+    width="500" height="300">
+  </div>
+  <div id= "size14x45">14x45
+    <img src="https://images.unsplash.com/photo-1453227588063-bb302b62f50b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjV8fGN1dGUlMjBkb2dzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=60"
+    width="500" height="300">
+  </div>
+</body>
+</html>
